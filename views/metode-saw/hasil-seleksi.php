@@ -75,9 +75,9 @@ require_once("../../templates/views_top.php");
                 </button>
               </form>
 
-              <button onclick="window.print()" class="btn btn-sm btn-secondary shadow-sm">
+              <a href="cetak-hasil.php?periode=<?= $id_periode_aktif ?>" target="_blank" class="btn btn-sm btn-secondary shadow-sm">
                 <i class="feather-printer me-2"></i> Cetak
-              </button>
+              </a>
             </div>
           </div>
 
