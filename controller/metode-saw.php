@@ -5,7 +5,7 @@ require_once("../../config/Auth.php");
 require_once("../../config/Alert.php");
 require_once("../../views/metode-saw/redirect.php");
 
-$alternatif = "SELECT * FROM alternatif ORDER BY id DESC";
+$alternatif = "SELECT * FROM alternatif ORDER BY id ASC";
 $views_alternatif = mysqli_query($conn, $alternatif);
 if (isset($_POST["add_alternatif"])) {
   $validated_post = array_map(function ($value) use ($conn) {

@@ -81,9 +81,10 @@ require_once("../../templates/views_top.php");
                   $q_total_krit = mysqli_query($conn, "SELECT COUNT(*) as total FROM kriteria");
                   $d_total_krit = mysqli_fetch_assoc($q_total_krit);
                   $total_kriteria = $d_total_krit['total'];
-                  $query_alt = mysqli_query($conn, "SELECT * FROM alternatif ORDER BY nama_lengkap ASC");
+                  $query_alt = mysqli_query($conn, "SELECT * FROM alternatif ORDER BY id ASC");
                   if (mysqli_num_rows($query_alt) > 0) {
                     $no = 1;
+                    $kode_alternatif = 'A' . str_pad(1, 2, '0', STR_PAD_LEFT);
                     while ($alt = mysqli_fetch_assoc($query_alt)) :
                       $q_filled = mysqli_query($conn, "SELECT COUNT(*) as total FROM skor_alternatif WHERE id_alternatif = '$alt[id]'");
                       $d_filled = mysqli_fetch_assoc($q_filled);
@@ -117,7 +118,7 @@ require_once("../../templates/views_top.php");
                               <i class="feather-user"></i>
                             </div>
                             <div>
-                              <h6 class="fw-bold mb-0 text-dark"><?= $alt['nama_lengkap'] ?></h6>
+                              <h6 class="fw-bold mb-0 text-dark"><?= $kode_alternatif++ ?> - <?= $alt['nama_lengkap'] ?></h6>
                               <small class="text-muted fs-11">NIK: <?= $alt['nik'] ?></small>
                             </div>
                           </div>
@@ -158,6 +159,7 @@ require_once("../../templates/views_top.php");
 <?php
 if (mysqli_num_rows($query_alt) > 0) {
   mysqli_data_seek($query_alt, 0);
+  $kode_alternatif_form = 'A' . str_pad(1, 2, '0', STR_PAD_LEFT);
   while ($alt = mysqli_fetch_assoc($query_alt)) :
 ?>
     <div class="modal fade" id="modalNilai<?= $alt['id'] ?>" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
@@ -177,7 +179,7 @@ if (mysqli_num_rows($query_alt) > 0) {
                   <i class="feather-user"></i>
                 </div>
                 <div>
-                  <h5 class="fw-bold mb-0"><?= $alt['nama_lengkap'] ?></h5>
+                  <h5 class="fw-bold mb-0"><?= $kode_alternatif_form++ ?> - <?= $alt['nama_lengkap'] ?></h5>
                   <small class="text-muted">NIK: <?= $alt['nik'] ?></small>
                 </div>
               </div>
