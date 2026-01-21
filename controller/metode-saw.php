@@ -44,6 +44,9 @@ if (isset($_POST["delete_alternatif"])) {
   }
 }
 
+$periode = "SELECT id FROM periode WHERE status = 'Aktif' ORDER BY id DESC LIMIT 1";
+$views_periode = mysqli_query($conn, $periode);
+$id_periode = mysqli_fetch_assoc($views_periode)['id'];
 if (isset($_POST['simpan_nilai'])) {
   if (save_penilaian($conn, $_POST)) {
     $message = "Berhasil! Data penilaian telah berhasil disimpan.";

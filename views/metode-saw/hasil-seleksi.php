@@ -111,7 +111,6 @@ require_once("../../templates/views_top.php");
                       $badge_rank = ($rank == 1) ? "bg-warning text-dark" : "bg-light text-muted border";
                       if ($rank == 2) $badge_rank = "bg-secondary text-white";
                       if ($rank == 3) $badge_rank = "bg-white border-warning text-warning border";
-
                       $is_layak = ($row['nilai_akhir'] >= 0.5);
                       $status_badge = $is_layak ? '<span class="badge bg-soft-success text-success">Layak</span>' : '<span class="badge bg-soft-danger text-danger">Tidak Layak</span>';
                   ?>

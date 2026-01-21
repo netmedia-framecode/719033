@@ -173,6 +173,7 @@ if (mysqli_num_rows($query_alt) > 0) {
           </div>
           <form action="" method="POST">
             <input type="hidden" name="id_alternatif" value="<?= $alt['id'] ?>">
+            <input type="hidden" name="id_periode" value="<?= $id_periode ?>">
             <div class="modal-body bg-light">
               <div class="d-flex align-items-center mb-4 p-3 bg-white rounded shadow-sm border">
                 <div class="user-avatar me-3 bg-primary text-white">
