@@ -1,5 +1,5 @@
 <?php require_once("../../controller/metode-saw.php");
-$_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Penilaian Alternatif";
+$_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Penilaian Penduduk";
 require_once("../../templates/views_top.php");
 ?>
 
@@ -46,8 +46,8 @@ require_once("../../templates/views_top.php");
         <h5 class="m-b-10">Daftar Penilaian Penduduk</h5>
       </div>
       <ul class="breadcrumb">
-        <li class="breadcrumb-item">Metode SAW</li>
-        <li class="breadcrumb-item active">Penilaian Alternatif</li>
+        <li class="breadcrumb-item">Seleksi dan Hasil</li>
+        <li class="breadcrumb-item active">Penilaian Penduduk</li>
       </ul>
     </div>
   </div>
@@ -208,7 +208,7 @@ if (mysqli_num_rows($query_alt) > 0) {
                           $q_sub = mysqli_query($conn, "SELECT * FROM sub_kriteria WHERE id_kriteria = '$krit[id]' ORDER BY bobot DESC");
                           while ($sub = mysqli_fetch_assoc($q_sub)) {
                             $is_selected = ($sub['id'] == $selected_id) ? 'selected' : '';
-                            echo "<option value='$sub[id]' $is_selected>(Bobot: $sub[bobot]) - $sub[nama_sub_kriteria]</option>";
+                            echo "<option value='$sub[id]' $is_selected>$sub[nama_sub_kriteria]</option>";
                           }
                           ?>
                         </select>

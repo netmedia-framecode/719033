@@ -1,5 +1,5 @@
 <?php require_once("../../controller/metode-saw.php");
-$_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Tambah Data Alternatif";
+$_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Tambah Data Penduduk";
 require_once("../../templates/views_top.php");
 ?>
 
@@ -10,7 +10,7 @@ require_once("../../templates/views_top.php");
         <h5 class="m-b-10"><?= $_SESSION["project_sistem_penerimaan_blt"]["name_page"] ?></h5>
       </div>
       <ul class="breadcrumb">
-        <li class="breadcrumb-item">Metode SAW</li>
+        <li class="breadcrumb-item">Seleksi dan Hasil</li>
         <li class="breadcrumb-item"><?= $_SESSION["project_sistem_penerimaan_blt"]["name_page"] ?></li>
       </ul>
     </div>
@@ -63,7 +63,7 @@ require_once("../../templates/views_top.php");
                 </div>
               </div>
               <div class="mt-4 hstack gap-2">
-                <a href="data-alternatif" class="btn btn-secondary">Kembali</a>
+                <a href="data-penduduk" class="btn btn-secondary">Kembali</a>
                 <button type="submit" name="add_alternatif" class="btn btn-primary">
                   <i class="feather-save me-2"></i> Tambah
                 </button>

@@ -7,7 +7,7 @@ if (!isset($_GET["p"])) {
   $pull_data = "SELECT * FROM alternatif WHERE id = '$id'";
   $store_data = mysqli_query($conn, $pull_data);
   $view_data = mysqli_fetch_assoc($store_data);
-  $_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Ubah Data Alternatif";
+  $_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Ubah Data Penduduk";
   require_once("../../templates/views_top.php"); ?>
   <div class="nxl-content" style="height: 100vh;">
 
@@ -18,7 +18,7 @@ if (!isset($_GET["p"])) {
           <h5 class="m-b-10"><?= $_SESSION["project_sistem_penerimaan_blt"]["name_page"] ?></h5>
         </div>
         <ul class="breadcrumb">
-          <li class="breadcrumb-item">Data Alternatif</li>
+          <li class="breadcrumb-item">Data Penduduk</li>
           <li class="breadcrumb-item"><?= $_SESSION["project_sistem_penerimaan_blt"]["name_page"] . ' ' . $view_data["nama_lengkap"]  ?></li>
         </ul>
       </div>
@@ -75,7 +75,7 @@ if (!isset($_GET["p"])) {
                   </div>
                 </div>
                 <div class="mt-4 hstack gap-2">
-                  <a href="data-alternatif" class="btn btn-secondary">Kembali</a>
+                  <a href="data-penduduk" class="btn btn-secondary">Kembali</a>
                   <button type="submit" name="edit_alternatif" class="btn btn-warning">
                     <i class="feather-save me-2"></i> Ubah
                   </button>

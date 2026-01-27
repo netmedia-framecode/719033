@@ -7,13 +7,10 @@ require_once("sections/navbar.php");
 <section id="beranda" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
   <div class="absolute inset-0 hero-pattern opacity-[0.05] -z-10"></div>
   <div class="max-w-7xl mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-20 leading-tight">
       Penyaluran Bantuan Langsung Tunai <br>
       <span class="text-blue-600">Transparan & Tepat Sasaran</span>
     </h1>
-    <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500 mb-10">
-      Sistem Pendukung Keputusan menggunakan metode <strong>ROC & SAW</strong>.
-    </p>
     <a href="#cek-penerima" class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-secondary transition shadow-lg shadow-blue-500/30">
       Cek Status Penerima
     </a>
@@ -67,7 +64,7 @@ require_once("sections/navbar.php");
             <th class="py-4 px-6">Prioritas</th>
             <th class="py-4 px-6">Nama Kriteria</th>
             <th class="py-4 px-6 text-center">Sifat</th>
-            <th class="py-4 px-6 text-center">Bobot (ROC)</th>
+            <th class="py-4 px-6 text-center">Bobot</th>
           </tr>
         </thead>
         <tbody class="text-gray-700 text-sm">
@@ -102,11 +99,11 @@ require_once("sections/navbar.php");
       </div>
       <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500">
         <div class="font-bold text-5xl text-gray-100 mb-2">02</div>
-        <h4 class="font-bold text-lg">ROC (Bobot)</h4>
+        <h4 class="font-bold text-lg">Pembobotan Kriteria</h4>
       </div>
       <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500">
         <div class="font-bold text-5xl text-gray-100 mb-2">03</div>
-        <h4 class="font-bold text-lg">SAW (Hitung)</h4>
+        <h4 class="font-bold text-lg">Seleksi Calon Penerima BLT</h4>
       </div>
       <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-green-500 transform scale-105">
         <div class="font-bold text-5xl text-gray-100 mb-2">04</div>

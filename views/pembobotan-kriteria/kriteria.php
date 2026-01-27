@@ -1,4 +1,8 @@
-<?php require_once("../../controller/metode-roc.php");
+<?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+require_once("../../controller/metode-roc.php");
 $_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Kriteria";
 require_once("../../templates/views_top.php"); ?>
 

@@ -1119,6 +1119,7 @@ if (isset($_SESSION["project_sistem_penerimaan_blt"]["users"])) {
       $data_menu = mysqli_fetch_assoc($view_menu);
       $menu = strtolower($data_menu['menu']);
       $menu = str_replace(" ", "-", $menu);
+      $url = $menu . "/" . $url;
       rename($menu . '/' . $data['urlOld'] . '.php', $menu . '/' . $url . '.php');
       rename($menu . '/' . "add-" . $data['urlOld'] . '.php', $menu . '/' . "add-" . $url . '.php');
       rename($menu . '/' . "edit-" . $data['urlOld'] . '.php', $menu . '/' . "edit-" . $url . '.php');

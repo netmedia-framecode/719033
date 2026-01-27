@@ -5,7 +5,7 @@ $_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Dashboard";
 require_once("../templates/views_top.php");
 ?>
 
-<div class="nxl-content">
+<div class="nxl-content" style="height: 100vh;">
 
   <div class="page-header">
     <div class="page-header-left d-flex align-items-center">
@@ -64,7 +64,7 @@ require_once("../templates/views_top.php");
               </div>
             </div>
             <div class="pt-2">
-              <span class="fs-12 text-muted">Parameter seleksi aktif (ROC)</span>
+              <span class="fs-12 text-muted">Parameter seleksi aktif</span>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ require_once("../templates/views_top.php");
         <div class="card stretch stretch-full">
           <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="card-title">Top 5 Rekomendasi Penerima BLT</h5>
-            <a href="metode-saw/hasil-seleksi" class="btn btn-sm btn-light-brand">Lihat Semua</a>
+            <a href="seleksi-dan-hasil/hasil-seleksi" class="btn btn-sm btn-light-brand">Lihat Semua</a>
           </div>
           <div class="card-body custom-card-action p-0">
             <div class="table-responsive">
@@ -183,7 +183,7 @@ require_once("../templates/views_top.php");
         <div class="card stretch stretch-full">
           <div class="card-header">
             <h5 class="card-title">Penduduk Baru Ditambahkan</h5>
-            <a href="metode-saw/data-alternatif" class="btn btn-sm btn-light-brand">Kelola</a>
+            <a href="seleksi-dan-hasil/data-penduduk" class="btn btn-sm btn-light-brand">Kelola</a>
           </div>
           <div class="card-body">
             <?php if (!empty($new_residents)) : ?>
@@ -206,18 +206,6 @@ require_once("../templates/views_top.php");
             <?php else: ?>
               <div class="text-center text-muted py-4">Belum ada data penduduk.</div>
             <?php endif; ?>
-
-            <hr class="border-dashed my-3" />
-
-            <div class="alert alert-soft-info mb-0">
-              <div class="d-flex align-items-center gap-2">
-                <i class="feather-info fs-4"></i>
-                <div>
-                  <h6 class="mb-0 fs-13 fw-bold">Info Sistem</h6>
-                  <p class="mb-0 fs-11">Sistem menggunakan metode SAW dengan pembobotan ROC.</p>
-                </div>
-              </div>
-            </div>
 
           </div>
         </div>

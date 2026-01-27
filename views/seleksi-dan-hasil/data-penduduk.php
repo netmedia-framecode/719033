@@ -1,5 +1,5 @@
 <?php require_once("../../controller/metode-saw.php");
-$_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Data Alternatif";
+$_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Data Penduduk";
 require_once("../../templates/views_top.php"); ?>
 
 <div class="nxl-content" style="height: 100vh;">
@@ -11,7 +11,7 @@ require_once("../../templates/views_top.php"); ?>
         <h5 class="m-b-10"><?= $_SESSION["project_sistem_penerimaan_blt"]["name_page"] ?></h5>
       </div>
       <ul class="breadcrumb">
-        <li class="breadcrumb-item">Data Alternatif</li>
+        <li class="breadcrumb-item">Seleksi dan Hasil</li>
         <li class="breadcrumb-item"><?= $_SESSION["project_sistem_penerimaan_blt"]["name_page"] ?></li>
       </ul>
     </div>
@@ -24,7 +24,7 @@ require_once("../../templates/views_top.php"); ?>
           </a>
         </div>
         <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-          <a href="add-data-alternatif" class="btn btn-primary">
+          <a href="add-data-penduduk" class="btn btn-primary">
             <i class="feather-plus me-2"></i>
             <span>Tambah</span>
           </a>
@@ -75,7 +75,7 @@ require_once("../../templates/views_top.php"); ?>
                       <td class="text-center"><?= $data['pekerjaan'] ?></td>
                       <td>
                         <div class="hstack gap-2 justify-content-center">
-                          <a href="edit-data-alternatif?p=<?= $data['id'] ?>" class="btn btn-warning btn-sm">
+                          <a href="edit-data-penduduk?p=<?= $data['id'] ?>" class="btn btn-warning btn-sm">
                             <i class="bi bi-pencil-square"></i>
                           </a>
                           <form action="" method="post" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');">

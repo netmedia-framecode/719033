@@ -3,7 +3,7 @@
 require_once("../../config/Base.php");
 require_once("../../config/Auth.php");
 require_once("../../config/Alert.php");
-require_once("../../views/metode-roc/redirect.php");
+require_once("../../views/pembobotan-kriteria/redirect.php");
 
 $kriteria = "SELECT * FROM kriteria ORDER BY id DESC";
 $views_kriteria = mysqli_query($conn, $kriteria);

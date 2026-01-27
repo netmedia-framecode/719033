@@ -3,7 +3,7 @@
 require_once("../../config/Base.php");
 require_once("../../config/Auth.php");
 require_once("../../config/Alert.php");
-require_once("../../views/metode-saw/redirect.php");
+require_once("../../views/seleksi-dan-hasil/redirect.php");
 
 $alternatif = "SELECT * FROM alternatif ORDER BY id ASC";
 $views_alternatif = mysqli_query($conn, $alternatif);
@@ -15,7 +15,7 @@ if (isset($_POST["add_alternatif"])) {
     $message = "Data alternatif baru berhasil ditambahkan.";
     $message_type = "success";
     alert($message, $message_type);
-    header("Location: data-alternatif");
+    header("Location: data-penduduk");
     exit();
   }
 }
@@ -27,7 +27,7 @@ if (isset($_POST["edit_alternatif"])) {
     $message = "Data alternatif " . $_POST['nama_lengkap'] . " berhasil diubah.";
     $message_type = "success";
     alert($message, $message_type);
-    header("Location: data-alternatif");
+    header("Location: data-penduduk");
     exit();
   }
 }
@@ -39,7 +39,7 @@ if (isset($_POST["delete_alternatif"])) {
     $message = "Data alternatif " . $_POST['nama_lengkap'] . " berhasil dihapus.";
     $message_type = "success";
     alert($message, $message_type);
-    header("Location: data-alternatif");
+    header("Location: data-penduduk");
     exit();
   }
 }
@@ -52,7 +52,7 @@ if (isset($_POST['simpan_nilai'])) {
     $message = "Berhasil! Data penilaian telah berhasil disimpan.";
     $message_type = "success";
     alert($message, $message_type);
-    header("Location: penilaian-alternatif");
+    header("Location: penilaian-penduduk");
     exit;
   }
 }

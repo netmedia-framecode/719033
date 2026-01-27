@@ -9,7 +9,7 @@ require_once("sections/navbar.php");
   <div class="max-w-4xl mx-auto px-4 text-center">
     <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Tentang Penelitian</h1>
     <p class="text-lg text-gray-500">
-      Implementasi Algoritma <span class="text-primary font-bold">ROC</span> dan <span class="text-primary font-bold">SAW</span>.
+      Sistem pendukung keputusan penerimaan BLT</span>.
     </p>
   </div>
 </header>
@@ -50,35 +50,6 @@ require_once("sections/navbar.php");
             </div>
           </div>
 
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-16 bg-gray-100">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-gray-900 text-center mb-12">Metodologi</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border hover:border-primary transition duration-300 group">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-blue-100 group-hover:bg-primary group-hover:text-white transition rounded-full flex items-center justify-center text-primary font-bold">1</div>
-            <h3 class="text-xl font-bold">ROC (Pembobotan)</h3>
-          </div>
-          <p class="text-gray-600 text-sm mb-4">
-            Rank Order Centroid digunakan untuk menentukan bobot kriteria berdasarkan ranking prioritas yang ditentukan pengambil keputusan.
-          </p>
-          <div class="bg-gray-50 p-3 rounded border text-center font-mono text-xs text-gray-700">W_j = (1/K) * Σ (1/i)</div>
-        </div>
-
-        <div class="bg-white p-8 rounded-2xl shadow-sm border hover:border-primary transition duration-300 group">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-cyan-100 group-hover:bg-cyan-600 group-hover:text-white transition rounded-full flex items-center justify-center text-cyan-600 font-bold">2</div>
-            <h3 class="text-xl font-bold">SAW (Perankingan)</h3>
-          </div>
-          <p class="text-gray-600 text-sm mb-4">
-            Simple Additive Weighting mencari penjumlahan terbobot dari rating kinerja pada setiap alternatif di semua atribut.
-          </p>
-          <div class="bg-gray-50 p-3 rounded border text-center font-mono text-xs text-gray-700">V_i = Σ (W_j * R_ij)</div>
         </div>
       </div>
     </div>

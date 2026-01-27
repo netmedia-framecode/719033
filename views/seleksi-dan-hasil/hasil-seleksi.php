@@ -11,10 +11,10 @@ require_once("../../templates/views_top.php");
   <div class="page-header">
     <div class="page-header-left d-flex align-items-center">
       <div class="page-header-title">
-        <h5 class="m-b-10">Hasil Perangkingan SAW</h5>
+        <h5 class="m-b-10">Hasil Perangkingan</h5>
       </div>
       <ul class="breadcrumb">
-        <li class="breadcrumb-item">Metode SAW</li>
+        <li class="breadcrumb-item">Seleksi dan Hasil</li>
         <li class="breadcrumb-item active">Hasil Seleksi</li>
       </ul>
     </div>
@@ -65,9 +65,9 @@ require_once("../../templates/views_top.php");
 
             <div class="d-flex gap-2">
 
-              <button type="button" class="btn btn-sm btn-info text-white shadow-sm" data-bs-toggle="modal" data-bs-target="#modalPenjelasan">
+              <!-- <button type="button" class="btn btn-sm btn-info text-white shadow-sm" data-bs-toggle="modal" data-bs-target="#modalPenjelasan">
                 <i class="feather-help-circle me-2"></i> Info Metode
-              </button>
+              </button> -->
 
               <form action="" method="POST">
                 <button type="submit" name="simpan_permanen" class="btn btn-sm btn-success shadow-sm">
@@ -99,7 +99,7 @@ require_once("../../templates/views_top.php");
                     <th width="80" class="text-center">Rank</th>
                     <th>NIK</th>
                     <th>Nama Penduduk</th>
-                    <th class="text-center">Nilai Preferensi (V)</th>
+                    <th class="text-center">Nilai Preferensi</th>
                     <th class="text-center">Status</th>
                   </tr>
                 </thead>
