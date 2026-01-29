@@ -36,8 +36,8 @@ require_once("../../templates/views_top.php");
                       <th width="100">Kode</th>
                       <th>Nama Kriteria</th>
                       <th>Jenis Atribut</th>
-                      <th width="150" class="text-center">Input Prioritas</th>
-                      <th width="200" class="text-center bg-light">Hasil Bobot (ROC)</th>
+                      <th width="150" class="text-center">Prioritas</th>
+                      <th width="200" class="text-center bg-light">Hasil Bobot</th>
                     </tr>
                   </thead>
                   <tbody>

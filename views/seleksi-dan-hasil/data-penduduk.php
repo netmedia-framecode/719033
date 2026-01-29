@@ -15,27 +15,29 @@ require_once("../../templates/views_top.php"); ?>
         <li class="breadcrumb-item"><?= $_SESSION["project_sistem_penerimaan_blt"]["name_page"] ?></li>
       </ul>
     </div>
-    <div class="page-header-right ms-auto">
-      <div class="page-header-right-items">
-        <div class="d-flex d-md-none">
-          <a href="javascript:void(0)" class="page-header-right-close-toggle">
-            <i class="feather-arrow-left me-2"></i>
-            <span>Back</span>
-          </a>
+    <?php if ($id_role == 4) { ?>
+      <div class="page-header-right ms-auto">
+        <div class="page-header-right-items">
+          <div class="d-flex d-md-none">
+            <a href="javascript:void(0)" class="page-header-right-close-toggle">
+              <i class="feather-arrow-left me-2"></i>
+              <span>Back</span>
+            </a>
+          </div>
+          <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
+            <a href="add-data-penduduk" class="btn btn-primary">
+              <i class="feather-plus me-2"></i>
+              <span>Tambah</span>
+            </a>
+          </div>
         </div>
-        <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-          <a href="add-data-penduduk" class="btn btn-primary">
-            <i class="feather-plus me-2"></i>
-            <span>Tambah</span>
+        <div class="d-md-none d-flex align-items-center">
+          <a href="javascript:void(0)" class="page-header-right-open-toggle">
+            <i class="feather-align-right fs-20"></i>
           </a>
         </div>
       </div>
-      <div class="d-md-none d-flex align-items-center">
-        <a href="javascript:void(0)" class="page-header-right-open-toggle">
-          <i class="feather-align-right fs-20"></i>
-        </a>
-      </div>
-    </div>
+    <?php } ?>
   </div>
   <!-- [ page-header ] end -->
 
@@ -58,7 +60,9 @@ require_once("../../templates/views_top.php"); ?>
                     <th class="text-center">Umur</th>
                     <th class="text-center">Status Keluarga</th>
                     <th class="text-center">Pekerjaan</th>
-                    <th class="text-center">Aksi</th>
+                    <?php if ($id_role == 4) { ?>
+                      <th class="text-center">Aksi</th>
+                    <?php } ?>
                   </tr>
                 </thead>
                 <tbody>
@@ -73,20 +77,22 @@ require_once("../../templates/views_top.php"); ?>
                       <td class="text-center"><?= $data['umur'] ?> Tahun</td>
                       <td class="text-center"><?= $data['status_keluarga'] ?></td>
                       <td class="text-center"><?= $data['pekerjaan'] ?></td>
-                      <td>
-                        <div class="hstack gap-2 justify-content-center">
-                          <a href="edit-data-penduduk?p=<?= $data['id'] ?>" class="btn btn-warning btn-sm">
-                            <i class="bi bi-pencil-square"></i>
-                          </a>
-                          <form action="" method="post" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
-                            <input type="hidden" name="id" value="<?= $data['id'] ?>">
-                            <input type="hidden" name="nama_lengkap" value="<?= $data['nama_lengkap'] ?>">
-                            <button type="submit" name="delete_alternatif" class="btn btn-danger btn-sm">
-                              <i class="bi bi-trash"></i>
-                            </button>
-                          </form>
-                        </div>
-                      </td>
+                      <?php if ($id_role == 4) { ?>
+                        <td>
+                          <div class="hstack gap-2 justify-content-center">
+                            <a href="edit-data-penduduk?p=<?= $data['id'] ?>" class="btn btn-warning btn-sm">
+                              <i class="bi bi-pencil-square"></i>
+                            </a>
+                            <form action="" method="post" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
+                              <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                              <input type="hidden" name="nama_lengkap" value="<?= $data['nama_lengkap'] ?>">
+                              <button type="submit" name="delete_alternatif" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                              </button>
+                            </form>
+                          </div>
+                        </td>
+                      <?php } ?>
                     </tr>
                   <?php } ?>
                 </tbody>

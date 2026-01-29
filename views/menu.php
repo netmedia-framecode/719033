@@ -2,7 +2,7 @@
 $_SESSION["project_sistem_penerimaan_blt"]["name_page"] = "Menu";
 require_once("../templates/views_top.php"); ?>
 
-<div class="nxl-content">
+<div class="nxl-content" style="height: 100vh;">
 
   <!-- [ page-header ] start -->
   <div class="page-header">

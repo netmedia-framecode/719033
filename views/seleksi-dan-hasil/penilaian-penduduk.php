@@ -56,14 +56,6 @@ require_once("../../templates/views_top.php");
     <div class="row">
       <div class="col-lg-12">
 
-        <div class="alert alert-primary d-flex align-items-center p-3 mb-4 shadow-sm border-0" role="alert">
-          <i class="feather-info fs-2 me-3"></i>
-          <div>
-            <h6 class="fw-bold mb-1">Panduan Penilaian</h6>
-            <p class="mb-0 fs-12 opacity-75">Lengkapi penilaian hingga <strong>100%</strong>.</p>
-          </div>
-        </div>
-
         <div class="card stretch stretch-full border-0 shadow-sm">
           <div class="card-body p-4">
             <div class="table-responsive">
@@ -73,7 +65,9 @@ require_once("../../templates/views_top.php");
                     <th width="50" class="text-center ps-4">No</th>
                     <th>Identitas Penduduk</th>
                     <th width="35%">Progres</th>
-                    <th width="150" class="text-center pe-4">Aksi</th>
+                    <?php if ($id_role == 4) { ?>
+                      <th width="150" class="text-center pe-4">Aksi</th>
+                    <?php } ?>
                   </tr>
                 </thead>
                 <tbody class="border-top-0">
@@ -132,13 +126,15 @@ require_once("../../templates/views_top.php");
                             <div class="progress-bar <?= $progress_bg ?>" role="progressbar" style="width: <?= $percentage ?>%;"></div>
                           </div>
                         </td>
-                        <td class="text-center pe-4">
-                          <button type="button" class="btn btn-sm <?= $btn_class ?> w-100 fw-bold shadow-sm"
-                            data-bs-toggle="modal"
-                            data-bs-target="#modalNilai<?= $alt['id'] ?>">
-                            <i class="<?= $btn_icon ?> me-2"></i> <?= $btn_label ?>
-                          </button>
-                        </td>
+                        <?php if ($id_role == 4) { ?>
+                          <td class="text-center pe-4">
+                            <button type="button" class="btn btn-sm <?= $btn_class ?> w-100 fw-bold shadow-sm"
+                              data-bs-toggle="modal"
+                              data-bs-target="#modalNilai<?= $alt['id'] ?>">
+                              <i class="<?= $btn_icon ?> me-2"></i> <?= $btn_label ?>
+                            </button>
+                          </td>
+                        <?php } ?>
                       </tr>
                   <?php
                     endwhile;

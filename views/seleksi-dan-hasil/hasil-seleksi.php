@@ -69,11 +69,13 @@ require_once("../../templates/views_top.php");
                 <i class="feather-help-circle me-2"></i> Info Metode
               </button> -->
 
-              <form action="" method="POST">
-                <button type="submit" name="simpan_permanen" class="btn btn-sm btn-success shadow-sm">
-                  <i class="feather-save me-2"></i> Simpan Hasil
-                </button>
-              </form>
+              <?php if ($id_role == 4) { ?>
+                <form action="" method="POST">
+                  <button type="submit" name="simpan_permanen" class="btn btn-sm btn-success shadow-sm">
+                    <i class="feather-save me-2"></i> Simpan Hasil
+                  </button>
+                </form>
+              <?php } ?>
 
               <a href="cetak-hasil.php?periode=<?= $id_periode_aktif ?>" target="_blank" class="btn btn-sm btn-secondary shadow-sm">
                 <i class="feather-printer me-2"></i> Cetak
@@ -99,7 +101,7 @@ require_once("../../templates/views_top.php");
                     <th width="80" class="text-center">Rank</th>
                     <th>NIK</th>
                     <th>Nama Penduduk</th>
-                    <th class="text-center">Nilai Preferensi</th>
+                    <!-- <th class="text-center">Nilai Preferensi</th> -->
                     <th class="text-center">Status</th>
                   </tr>
                 </thead>
@@ -120,7 +122,7 @@ require_once("../../templates/views_top.php");
                         </td>
                         <td><?= $row['nik'] ?></td>
                         <td><?= $row['nama'] ?></td>
-                        <td class="text-center fs-16 text-primary font-monospace"><?= number_format($row['nilai_akhir'], 4) ?></td>
+                        <!-- <td class="text-center fs-16 text-primary font-monospace"><?= number_format($row['nilai_akhir'], 4) ?></td> -->
                         <td class="text-center"><?= $status_badge ?></td>
                       </tr>
                     <?php $rank++;
